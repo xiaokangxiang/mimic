@@ -368,6 +368,8 @@ defmodule Mimic do
         raise ArgumentError, "Module #{inspect(module)} is not available"
 
       error ->
+        IO.inspect("printing error here")
+        IO.inspect(error)
         validate_server_response(error, :copy)
     end
   end
